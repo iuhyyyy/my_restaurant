@@ -13,7 +13,8 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        //
+        $orders =orders::all();
+        return $orders;
     }
 
     /**
@@ -29,7 +30,14 @@ class OrdersController extends Controller
      */
     public function store(StoreordersRequest $request)
     {
-        //
+        $orders = new orders;
+        $orders->user_id = $request->user_id;
+        $orders->order_type = $request->order_type;
+        $orders->order_total = $request->order_total;
+        $orders->order_status = $request->order_total;
+
+        $orders->save();
+        return $orders;
     }
 
     /**

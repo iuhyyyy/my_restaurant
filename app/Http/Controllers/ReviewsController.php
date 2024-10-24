@@ -13,7 +13,8 @@ class ReviewsController extends Controller
      */
     public function index()
     {
-        //
+        $reviews =reviews::all();
+        return $reviews;
     }
 
     /**
