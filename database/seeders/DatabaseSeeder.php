@@ -50,6 +50,18 @@ class DatabaseSeeder extends Seeder
         $this->call([
         categoriesSeeder::class
         ]);
+        $menus = [
+            [
+            'name' => 'Burger',
+            'category_id' => '2',
+            'price' => '500',
+          
+            ],
+        ];
+        DB::table('menus')->insert($menus);
+        $this->call([
+            categoriesSeeder::class
+        ]);
     }
 
 }

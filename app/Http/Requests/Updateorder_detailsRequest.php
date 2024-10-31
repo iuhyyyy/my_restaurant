@@ -11,7 +11,7 @@ class Updateorder_detailsRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
